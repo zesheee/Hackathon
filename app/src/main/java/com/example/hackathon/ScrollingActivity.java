@@ -17,7 +17,7 @@ import android.widget.TextView;
 
 public class ScrollingActivity extends AppCompatActivity implements View.OnClickListener {
 
-    Button btnAppany;
+    Button btnAppany, btnLogin;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -28,6 +28,8 @@ public class ScrollingActivity extends AppCompatActivity implements View.OnClick
 
         btnAppany = (Button) findViewById(R.id.Appany); //найти кнопку в лэйоут
         btnAppany.setOnClickListener(this); //присвоить обработчик
+        btnLogin = (Button) findViewById(R.id.btnLogin); //найти кнопку в лэйоут
+        btnLogin.setOnClickListener(this); //присвоить обработчик
     }
 
     @Override
@@ -36,6 +38,10 @@ public class ScrollingActivity extends AppCompatActivity implements View.OnClick
             case R.id.Appany:
                 Intent intent = new Intent(this, ActivityAppany.class);
                 startActivity(intent);
+                break;
+            case R.id.btnLogin:
+                Intent intent_2 = new Intent(this, LoginActivity.class);
+                startActivity(intent_2);
                 break;
         }
     }
